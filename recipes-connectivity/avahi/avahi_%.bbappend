@@ -1,8 +1,8 @@
-FILESEXTRAPATHS_append := ":${THISDIR}/files"
+FILESEXTRAPATHS:append := ":${THISDIR}/files"
 
-FILES_${PN} += "/usr/share/dbus-1/interfaces"
+FILES:${PN} += "/usr/share/dbus-1/interfaces"
 
-do_install_append() {
+do_install:append() {
     # Move example services as we don't want to advertise example services
     install -d ${D}/usr/share/doc/${PN}
 #    mv ${D}/etc/avahi/services/ssh.service ${D}/usr/share/doc/${PN}/

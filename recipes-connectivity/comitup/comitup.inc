@@ -8,9 +8,9 @@ LICENSE = "GPL-2.0"
 LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
 DEPENDS = "python3-pbr-native "
-RDEPENDS_${PN} = "avahi-autoipd avahi-daemon coreutils dnsmasq iw iputils-arping \
+RDEPENDS:${PN} = "avahi-autoipd avahi-daemon coreutils dnsmasq iw iputils-arping \
                   networkmanager systemd wpa-supplicant-cli python3-core \
-                  python3-pycrypto python3-dbus python3-flask python3-jinja2  \
+                  python3-dbus python3-flask python3-jinja2  \
                   python3-networkmanager python3-pygobject python3-pyinotify \
                   python3-pkg-resources python3-plistlib python3-cachetools \
                   python3-pycairo python3-multiprocessing"
@@ -23,11 +23,11 @@ SRC_URI = " \
 
 PYTHON_SITEPACKAGES_DIR ?= "/usr/share/comitup"
 
-FILES_${PN} += "/lib/ /sbin/"
+FILES:${PN} += "/lib/ /sbin/"
 
-SYSTEMD_SERVICE_${PN} = " comitup.service"
+SYSTEMD_SERVICE:${PN} = " comitup.service"
 
-do_install_append(){
+do_install:append(){
     install -d ${D}${systemd_unitdir}/system
     install -m 0644 ${WORKDIR}/comitup.service ${D}${systemd_unitdir}/system
     install -m 0644 ${WORKDIR}/comitup-web.service ${D}${systemd_unitdir}/system
@@ -39,4 +39,4 @@ do_install_append(){
 }
 
 
-S = "${WORKDIR}/git/"
+S = "${WORKDIR}/git"
