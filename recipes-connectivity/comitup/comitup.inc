@@ -7,7 +7,7 @@ SECTION = "devel/scripts"
 LICENSE = "GPL-2.0"
 LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 
-DEPENDS = "python3-pbr-native "
+DEPENDS = "python3-pbr-native python3-pytest-runner-native"
 RDEPENDS:${PN} = "avahi-autoipd avahi-daemon coreutils dnsmasq iw iputils-arping \
                   networkmanager systemd wpa-supplicant-cli python3-core \
                   python3-dbus python3-flask python3-jinja2  \
