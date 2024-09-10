@@ -6,7 +6,7 @@ Documentation=man:comitup(8)
 [Service]
 Type=dbus
 BusName=com.github.davesteele.comitup
-ExecStart=/usr/bin/comitup
+ExecStart=/usr/bin/comitup-cmd
 # PrivateTmp=true
 # PrivateDevices=yes
 # PrivateNetwork=yes
@@ -18,4 +18,4 @@ Restart=always
 RestartSec=5
 
 [Install]
-WantedBy=multi-user.target 
+WantedBy=multi-user.target

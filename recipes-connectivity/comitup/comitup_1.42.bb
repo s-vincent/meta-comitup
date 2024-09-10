@@ -1,7 +1,7 @@
 require comitup.inc
 
-# v1.38
-SRCREV = "0f5d16fdf350eac28e041a8426b2f66872da0bd3"
+# v1.42
+SRCREV = "cb25cf96b428a4a6cf30602a56c7433ead990951"
 
 SRC_URI += " \
             git://github.com/davesteele/comitup;protocol=https;branch=main;rev=${SRCREV} \
